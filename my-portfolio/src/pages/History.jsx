@@ -6,7 +6,7 @@ const History = () => {
     ];
   
     return (
-      <section id="history" className="min-h-screen p-8 bg-white">
+      <section id="history" className="min-h-screen p-8 bg-custom-dark">
         <h2 className="text-3xl font-bold mb-4">Professional History</h2>
         <ul className="space-y-4">
           {history.map((item, index) => (

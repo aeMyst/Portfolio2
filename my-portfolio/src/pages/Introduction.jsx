@@ -2,7 +2,7 @@ const Introduction = () => {
     const technologies = ['JavaScript', 'React', 'Node.js', 'Tailwind CSS', 'SQL'];
   
     return (
-      <section id="about" className="min-h-screen p-8 bg-gray-100">
+      <section id="about" className="min-h-screen p-8 bg-custom-dark">
         <h2 className="text-3xl font-bold mb-4">About Me</h2>
         <p className="mb-6">I am a passionate developer experienced in building web applications using modern technologies.</p>
         <h3 className="text-xl font-semibold mb-4">Technologies I've Used:</h3>

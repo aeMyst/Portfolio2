@@ -10,7 +10,7 @@ const Projects = () => {
   return (
     <section
       id="projects"
-      className="min-h-screen bg-gray-100 text-gray-800 p-8 flex flex-col items-center"
+      className="min-h-screen bg-custom-dark text-gray-800 p-8 flex flex-col items-center"
     >
       <h2 className="text-3xl font-bold mb-6">My Projects</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
