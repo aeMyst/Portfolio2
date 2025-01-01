@@ -74,7 +74,7 @@ const Header = () => {
             className="label cursor-pointer"
             onClick={() => handleNavigation('history')}
           >
-            Professional History
+            Experience
           </label>
         </div>
       </div>
