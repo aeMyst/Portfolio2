@@ -6,6 +6,7 @@ import HistorySection from './pages/History';
 import Projects from './pages/Projects'; 
 import Header from './pages/Header';
 import Footer from './pages/Footer';
+import AnimatedSection from './setup/ScrollAnimation';
 
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -34,10 +35,18 @@ const App = () => {
           {/* Main Content */}
           <main className="flex-grow flex flex-col items-center justify-center">
             <div className="w-full max-w-4xl px-4">
-              <Home />
-              <Introduction />
-              <HistorySection />
-              <Projects /> {/* Add the Projects component here */}
+              <AnimatedSection>
+                <Home />
+              </AnimatedSection>
+              <AnimatedSection>
+                <Introduction />
+              </AnimatedSection>
+              <AnimatedSection>
+                <HistorySection />
+              </AnimatedSection>
+              <AnimatedSection>
+                <Projects />
+              </AnimatedSection>
             </div>
           </main>
 
