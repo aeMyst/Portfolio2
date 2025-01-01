@@ -9,7 +9,10 @@ export default {
       colors: {
         'custom-dark': '#242424',
       },
-    },
+      fontFamily: {
+        sans: ['Poppins', 'Inter', 'system-ui', 'Avenir', 'Helvetica', 'Arial', 'sans-serif'],
+      },
   },
-  plugins: [],
+    plugins: [],
+  },
 };

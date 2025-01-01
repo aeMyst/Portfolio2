@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Poppins', system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
   font-synthesis: none;
@@ -12,28 +12,28 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Tailwind manages layout and centering; remove flex styles from body */
 body {
   margin: 0;
   box-sizing: border-box;
-  background-color: #242424; /* Keep this for dark mode */
-  color: rgba(255, 255, 255, 0.87); /* Adjust if needed */
+  background-color: #242424; 
+  color: rgba(255, 255, 255, 0.87); 
+  font-family: 'Poppins', sans-serif; 
 }
 
 /* Override link styles if needed */
 a {
   font-weight: 500;
   color: #646cff;
-  text-decoration: none; /* Let Tailwind handle hover and focus */
+  text-decoration: none; 
 }
 a:hover {
   color: #535bf2;
 }
 
-/* Reset heading sizes (optional) */
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+  font-family: 'Playfair Display', serif;
 }
 
 button {
