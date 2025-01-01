@@ -1,21 +1,83 @@
 import React from 'react';
+import '../elements/Header.css';
 
 const Header = () => {
-  return (
-    <header className="bg-red text-white p-4 fixed top-0 w-full shadow-md">
-      <nav className="container mx-auto flex items-center justify-between">
-        {/* Home Button */}
-        <a href="#home" className="text-xl font-bold hover:underline">
-          Home
-        </a>
+  const handleNavigation = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
-        {/* Navigation Links */}
-        <ul className="flex items-center space-x-6">
-          <li><a href="#about" className="hover:underline">About</a></li>
-          <li><a href="#history" className="hover:underline">History</a></li>
-          <li><a href="#contact" className="hover:underline">Contact</a></li>
-        </ul>
-      </nav>
+  return (
+    <header className="bg-custom-dark text-white p-4 fixed top-0 w-full shadow-md z-10">
+      <div className="body">
+        <div className="tabs">
+          {/* Home Tab */}
+          <input
+            defaultChecked
+            value="Home"
+            name="navigation"
+            id="home-tab"
+            type="radio"
+            className="input"
+          />
+          <label
+            htmlFor="home-tab"
+            className="label cursor-pointer"
+            onClick={() => handleNavigation('home')}
+          >
+            Home
+          </label>
+
+          {/* About Me Tab */}
+          <input
+            value="About"
+            name="navigation"
+            id="about-tab"
+            type="radio"
+            className="input"
+          />
+          <label
+            htmlFor="about-tab"
+            className="label cursor-pointer"
+            onClick={() => handleNavigation('about')}
+          >
+            About Me
+          </label>
+
+          {/* Projects Tab */}
+          <input
+            value="Projects"
+            name="navigation"
+            id="projects-tab"
+            type="radio"
+            className="input"
+          />
+          <label
+            htmlFor="projects-tab"
+            className="label cursor-pointer"
+            onClick={() => handleNavigation('projects')}
+          >
+            Projects
+          </label>
+          {/* History Tab */}
+            <input
+            value="history"
+            name="navigation"
+            id="history-tab"
+            type="radio"
+            className="input"
+          />
+          <label
+            htmlFor="history-tab"
+            className="label cursor-pointer"
+            onClick={() => handleNavigation('history')}
+          >
+            Professional History
+          </label>
+        </div>
+      </div>
     </header>
   );
 };
