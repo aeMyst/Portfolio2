@@ -1,5 +1,6 @@
 import React from 'react';
 import '../elements/Socials.css';
+import '../elements/ResumeButton.css';
 import '../elements/HomeCard.css';
 
 const Home = () => {
@@ -20,7 +21,7 @@ const Home = () => {
 
       {/* Social Media Buttons */}
       <div className="mt-8 flex space-x-4">
-        {/* Instagram */}
+      {/* Instagram */}
       <button class="button button-instagram">
         <svg
           viewBox="0 0 24 24"
@@ -39,7 +40,7 @@ const Home = () => {
           ></path>
         </svg>
       </button>
-
+      {/* LinkedIn */}
       <button class="button button-linkedin">
         <svg
           viewBox="0 0 24 24"
@@ -57,7 +58,7 @@ const Home = () => {
           ></path>
         </svg>
       </button>
-
+      {/* Youtube */}
       <button class="button button-youtube">
         <svg
           viewBox="0 0 24 24"
@@ -75,7 +76,7 @@ const Home = () => {
           ></path>
         </svg>
       </button>
-
+      {/* Github */}
       <button class="button button-github">
         <svg
           viewBox="0 0 24 24"
@@ -93,12 +94,18 @@ const Home = () => {
           ></path>
         </svg>
       </button>
-            </div>
-          </div>
-        </div>
-      <span></span>
-      <span></span>
-    </section>
+      </div>
+      <div className="mt-8 flex space-x-4">
+        {/* Resume Button */}
+        <button class="Resume-button">
+          Resume
+        </button>
+      </div>
+    </div>
+  </div>
+  <span></span>
+  <span></span>
+</section>
   );
 };
 

@@ -1,0 +1,43 @@
+.Resume-button {
+    cursor: pointer;
+    width: 150px;
+    height: 60px;
+    border-radius: 100px;
+    border: none;
+    background: linear-gradient(120deg, #833ab4, #fd1d1d, #fcb045);
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+    transition: 0.1s;
+    color: white;
+    font-weight: bold;
+}
+
+.Resume-button:active {
+    transform: scale(0.85);
+}
+
+.Resume-button::before {
+    content: "";
+    position: absolute;
+    width: 145px;
+    height: 55px;
+    background-color: #212121;
+    border-radius: 50px;
+    z-index: -1;
+    border: 0px solid rgba(255, 255, 255, 0.411);
+    transition: 0.4s;
+}
+
+.Resume-button:hover::before {
+    width: 0px;
+    height: 0px;
+}
+
+.Resume-button::after {
+    content: "→";
+    padding-left: 10px;
+}

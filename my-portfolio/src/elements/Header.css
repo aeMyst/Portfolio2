@@ -15,6 +15,7 @@ header {
   align-content: center;
   font-family: "Poppins", "SF Pro Icons", "AOS Icons", "Helvetica Neue",
     Helvetica, Arial, sans-serif, system-ui;
+    font-weight: bold; 
 }
 
 .tabs {
