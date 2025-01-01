@@ -3,7 +3,7 @@ import LoadingScreen from './components/LoadingScreen';
 import Home from './pages/Home';
 import Introduction from './pages/Introduction';
 import HistorySection from './pages/History';
-import Projects from './pages/Projects'; // Import the new Projects component
+import Projects from './pages/Projects'; 
 import Header from './pages/Header';
 import Footer from './pages/Footer';
 

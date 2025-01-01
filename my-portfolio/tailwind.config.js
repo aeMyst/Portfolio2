@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        'custom-dark': '#242424', // Add your custom color here
+        'custom-dark': '#242424',
       },
     },
   },
