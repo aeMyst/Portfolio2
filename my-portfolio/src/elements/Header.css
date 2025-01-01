@@ -1,4 +1,10 @@
 /* From Uiverse.io by Admin12121 */ 
+header {
+  background: rgba(36, 36, 36, 0.8);
+  backdrop-filter: blur(5px); 
+  -webkit-backdrop-filter: blur(5px); 
+  transition: background 0.3s ease; 
+}
 
 .body {
   --radius: 8px;
@@ -8,7 +14,7 @@
   display: grid;
   place-items: center;
   align-content: center;
-  font-family: "SF Pro Text", "SF Pro Icons", "AOS Icons", "Helvetica Neue",
+  font-family: "Poppins", "SF Pro Icons", "AOS Icons", "Helvetica Neue",
     Helvetica, Arial, sans-serif, system-ui;
 }
 
@@ -16,11 +22,11 @@
   height: var(--height);
   display: grid;
   grid-auto-flow: column;
-  background: #242424;
+  background: transparent;
   border-radius: var(--radius);
   grid-auto-columns: 1fr;
   position: relative;
-  border: var(--border) solid #242424;
+  border: none;
 }
 
 .tabs {
@@ -114,7 +120,7 @@
   content: "";
   width: calc(100% / var(--count));
   height: 100%;
-  background: #FAF8F6;
+  background: rgba(0, 0, 0, 0.6);
   position: absolute;
   border-radius: calc(var(--radius) - var(--border));
   mix-blend-mode: difference;
@@ -122,9 +128,9 @@
   transition: translate, outline-color;
   transition-duration: var(--speed);
   transition-timing-function: var(--ease, ease);
-  outline: 2px solid transparent;
+  outline: none;
 }
 
 .tabs:has(:focus-visible)::after {
-  outline-color: red;
+  outline-color: transparent;
 }

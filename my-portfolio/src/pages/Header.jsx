@@ -10,7 +10,7 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-custom-dark text-white p-4 fixed top-0 w-full shadow-md z-10">
+    <header className="text-white p-4 fixed top-0 w-full shadow-md z-10">
       <div className="body">
         <div className="tabs">
           {/* Home Tab */}
@@ -25,6 +25,7 @@ const Header = () => {
           <label
             htmlFor="home-tab"
             className="label cursor-pointer"
+            style={{ color: 'white' }} 
             onClick={() => handleNavigation('home')}
           >
             Home
@@ -41,6 +42,7 @@ const Header = () => {
           <label
             htmlFor="about-tab"
             className="label cursor-pointer"
+            style={{ color: 'white' }} 
             onClick={() => handleNavigation('about')}
           >
             About Me
@@ -57,6 +59,7 @@ const Header = () => {
           <label
             htmlFor="projects-tab"
             className="label cursor-pointer"
+            style={{ color: 'white' }} 
             onClick={() => handleNavigation('projects')}
           >
             Projects
@@ -72,6 +75,7 @@ const Header = () => {
           <label
             htmlFor="history-tab"
             className="label cursor-pointer"
+            style={{ color: 'white' }} 
             onClick={() => handleNavigation('history')}
           >
             Experience
