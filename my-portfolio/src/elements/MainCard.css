@@ -47,10 +47,20 @@
     border-radius: 20px;
 }
 
-.card h3 {
-    font-size: 1.5rem;
-    color: #fff;
-    margin-bottom: 8px;
+/* Align the star icon inline with the h3 */
+h3.title-with-icon {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px; /* Adjust spacing between text and icon */
+  font-size: 1.5rem;
+  color: #fff;
+  font-weight: bold; 
+  margin-bottom: 8px;
+}
+
+.section-icon {
+  width: 40px; /* Adjust size of the star icon */
+  height: 20px;
 }
 
 .card p {
