@@ -1,0 +1,67 @@
+@keyframes slide {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes slide-reverse {
+    from {
+        transform: translateX(-50%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+.tape-container {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+    padding: 20px 0; 
+}
+
+h3 {
+    margin-top: 10px; 
+    margin-bottom: 20px; 
+    font-size: 1.5rem;
+    color: #fff;
+    text-align: center;
+}
+
+.tape {
+    display: flex; 
+    white-space: nowrap;
+    animation: 15s slide linear infinite;
+    width: max-content; 
+}
+
+.tape.reverse {
+    animation: 15s slide-reverse linear infinite; 
+}
+
+.tape-item {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    border: 2px solid #fff; 
+    border-radius: 10px; 
+    padding: 15px 30px; 
+    margin: 10px 20px; 
+    background-color: rgba(0, 0, 0, 0.7); 
+    transition: transform 0.2s ease; 
+}
+
+.tape-item img {
+    height: 50px; 
+    margin-right: 15px; 
+}
+
+.tape-item p {
+    font-size: 16px; 
+    color: #fff;
+    margin: 0;
+    white-space: nowrap;
+}

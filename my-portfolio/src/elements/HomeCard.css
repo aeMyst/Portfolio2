@@ -8,7 +8,7 @@
   animation: animate 1.5s linear infinite;
   box-shadow: 0 0 20px 10px rgba(20, 255, 233, 0.1),
   0 0 40px 20px rgba(255, 235, 59, 0.1),
-  0 0 60px 30px rgba(255, 0, 224, 0.1); /* Add glow effect */
+  0 0 60px 30px rgba(255, 0, 224, 0.1);
 }
 .wrapper .display,
 .wrapper span {
@@ -18,16 +18,17 @@
   transform: translate(-50%, -50%);
 }
 .wrapper .display {
+  background: transparent;
   z-index: 2px;
   height: calc(100% - 16px);
   width: calc(100% - 16px);
   background: #1b1b1b;
   border-radius: 6px;
   text-align: center;
-  display: flex; /* Flexbox for centering */
-  flex-direction: column; /* Arrange items vertically */
-  align-items: center; /* Horizontal centering */
-  justify-content: center; /* Vertical centering */
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+  justify-content: center; 
 }
 .display #time {
   line-height: 85px;
@@ -51,7 +52,6 @@
   height: 100%;
   width: 100%;
   border-radius: 10px;
-  background: inherit;
 }
 .wrapper span:first-child {
   filter: blur(7px);
@@ -59,5 +59,6 @@
 .wrapper span:last-child {
   filter: blur(20px);
 }
+
 
 

@@ -19,7 +19,7 @@ const Home = () => {
           {/* Introduction */}
           <div className="text-center w-full max-w-4xl px-4">
             <p className="mt-4 text-lg">
-              3rd Year Computer Science Student At The University of Calgary
+              Passionate 3rd Year Computer Science Student At The University of Calgary
             </p>
           </div>
 

@@ -34,21 +34,29 @@ const App = () => {
 
           {/* Main Content */}
           <main className="flex-grow flex flex-col items-center justify-center">
-            <div className="w-full max-w-4xl px-4">
-              <AnimatedSection>
-                <Home />
-              </AnimatedSection>
-              <AnimatedSection>
-                <Introduction />
-              </AnimatedSection>
-              <AnimatedSection>
-                <HistorySection />
-              </AnimatedSection>
-              <AnimatedSection>
-                <Projects />
-              </AnimatedSection>
-            </div>
-          </main>
+  <div className="w-full max-w-4xl px-4">
+    <div className="mb-16">
+      <AnimatedSection>
+        <Home />
+      </AnimatedSection>
+    </div>
+    <div className="mb-16">
+      <AnimatedSection>
+        <Introduction />
+      </AnimatedSection>
+    </div>
+    <div className="mb-16">
+      <AnimatedSection>
+        <HistorySection />
+      </AnimatedSection>
+    </div>
+    <div className="mb-16">
+      <AnimatedSection>
+        <Projects />
+      </AnimatedSection>
+    </div>
+  </div>
+</main>
 
           {/* Footer */}
           <Footer />
