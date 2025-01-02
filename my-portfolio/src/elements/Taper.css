@@ -18,9 +18,11 @@
 
 .tape-container {
     overflow: hidden;
-    width: 100%;
+    width: 750px;
     position: relative;
-    padding: 20px 0; 
+    padding: 20px 0;
+    mask-image: linear-gradient(to right, transparent, black 40%, black 80%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 40%, black 80%, transparent);
 }
 
 h3 {
@@ -46,11 +48,10 @@ h3 {
     display: flex;
     align-items: center;
     text-align: left;
-    border: 2px solid #fff; 
     border-radius: 10px; 
     padding: 15px 30px; 
     margin: 10px 20px; 
-    background-color: rgba(0, 0, 0, 0.7); 
+    background-color: rgba(0, 0, 0, 0.2); 
     transition: transform 0.2s ease; 
 }
 
