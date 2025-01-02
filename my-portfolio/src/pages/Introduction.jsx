@@ -24,7 +24,7 @@ const Introduction = () => {
       <h2 className="text-4xl font-bold mb-4 text-center">About Me</h2>
       <div className="cards-container">
         {/* Card 1 */}
-        <div className="card">
+        <div className="card small">
           <h3>Introduction</h3>
           <p>
             My name is Peter Tran, and I am a Computer Science student at the University of Calgary. 
@@ -33,7 +33,7 @@ const Introduction = () => {
           </p>
         </div>
         {/* Card 2 */}
-        <div className="card">
+        <div className="card skillset">
           <h3>Skillsets</h3>
           <div className="tape-container">
             {/* Original Tape */}
@@ -65,12 +65,12 @@ const Introduction = () => {
           </div>
         </div>
         {/* Card 3 */}
-        <div className="card">
+        <div className="card medium">
           <h3>Hobbies</h3>
           <p>Another example of a card description.</p>
         </div>
         {/* Card 4 */}
-        <div className="card map-container">
+        <div className="card large map-container">
           <img src={cardImage} alt="Map" className="map-image" />
           <img src={locationPin} alt="Location Pin" className="location-pin" />
         </div>

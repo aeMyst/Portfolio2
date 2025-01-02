@@ -34,23 +34,23 @@ const App = () => {
 
           {/* Main Content */}
           <main className="flex-grow flex flex-col items-center justify-center">
-  <div className="w-full max-w-4xl px-4">
-    <div className="mb-16">
+  <div className="w-full max-w-8xl px-10"> {/* Increased width and padding */}
+    <div className="mb-24"> {/* Increased bottom margin for spacing */}
       <AnimatedSection>
         <Home />
       </AnimatedSection>
     </div>
-    <div className="mb-16">
+    <div className="mb-24">
       <AnimatedSection>
         <Introduction />
       </AnimatedSection>
     </div>
-    <div className="mb-16">
+    <div className="mb-24">
       <AnimatedSection>
         <HistorySection />
       </AnimatedSection>
     </div>
-    <div className="mb-16">
+    <div className="mb-24">
       <AnimatedSection>
         <Projects />
       </AnimatedSection>
