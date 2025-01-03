@@ -10,17 +10,54 @@ import cssIcon from '../assets/logos/css.svg';
 import javascriptIcon from '../assets/logos/javascript.svg';
 import reactIcon from '../assets/logos/react.svg';
 import sqlIcon from '../assets/logos/sql.svg';
+import dartIcon from '../assets/logos/dart.svg';
+import djangoIcon from '../assets/logos/django.svg';
+import androidstudioIcon from '../assets/logos/androidstudio.svg';
+import excelIcon from '../assets/logos/excel.svg';
+import figmaIcon from '../assets/logos/figma.svg';
+import firebaseIcon from '../assets/logos/firebase.svg';
+import flutterIcon from '../assets/logos/flutter.svg';
+import githubIcon from '../assets/logos/github.svg';
+import gitlabIcon from '../assets/logos/gitlab.svg';
+import intellijIcon from '../assets/logos/intellij.svg';
+import javaIcon from '../assets/logos/java.svg';
+import mysqlIcon from '../assets/logos/mysql.svg';
+import photoshopIcon from '../assets/logos/photoshop.svg';
+import pythonIcon from '../assets/logos/python.svg';
+import tailwindIcon from '../assets/logos/tailwind.svg';
+import vscodeIcon from '../assets/logos/vscode.svg';
+
 
 const Introduction = () => {
-  const technologies = [
+  const tools = [
     { name: 'HTML', icon: htmlIcon },
     { name: 'CSS', icon: cssIcon },
     { name: 'JavaScript', icon: javascriptIcon },
     { name: 'React', icon: reactIcon },
     { name: 'SQL', icon: sqlIcon },
+    { name: 'Dart', icon: dartIcon },
+    { name: 'Django', icon: djangoIcon },
+    { name: 'Java', icon: javaIcon },
+    { name: 'Python', icon: pythonIcon },
+    { name: 'TailWindCSS', icon: tailwindIcon },
+    { name: 'Flutter', icon: flutterIcon },
   ];
 
-  const tapeItems = [...technologies, ...technologies];
+  const technologies = [
+    { name: 'Android Studio', icon: androidstudioIcon },
+    { name: 'Excel', icon: excelIcon },
+    { name: 'Figma', icon: figmaIcon },
+    { name: 'Firebase', icon: firebaseIcon },
+    { name: 'Github', icon: githubIcon },
+    { name: 'Gitlab', icon: gitlabIcon },
+    { name: 'Intellij', icon: intellijIcon },
+    { name: 'mySQL', icon: mysqlIcon },
+    { name: 'Photoshop', icon: photoshopIcon },
+    { name: 'vsCode', icon: vscodeIcon },
+  ];
+
+  const tapeItems = [...tools, ...tools];
+  const tapeReverse = [...technologies, ...technologies];
 
   return (
     <section
@@ -63,7 +100,7 @@ const Introduction = () => {
             </div>
             {/* Reverse Tape */}
             <div className="tape reverse">
-              {tapeItems.map((tech, index) => (
+              {tapeReverse.map((tech, index) => (
                 <div key={index} className="tape-item">
                   <img
                     src={tech.icon}

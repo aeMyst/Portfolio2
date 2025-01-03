@@ -36,12 +36,12 @@ h3 {
 .tape {
     display: flex; 
     white-space: nowrap;
-    animation: 15s slide linear infinite;
+    animation: 20s slide linear infinite;
     width: max-content; 
 }
 
 .tape.reverse {
-    animation: 15s slide-reverse linear infinite; 
+    animation: 20s slide-reverse linear infinite; 
 }
 
 .tape-item {
