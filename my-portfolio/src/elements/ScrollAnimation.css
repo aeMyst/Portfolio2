@@ -1,0 +1,22 @@
+@keyframes show {
+    from {
+      opacity: 0;
+      transform: scale(0.5);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  .animated-section {
+    opacity: 0;
+    transform: scale(0.5);
+    animation-name: show;
+    animation-timeline: view();
+    animation-range: entry 0% cover 30%;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards; 
+  }
+  
