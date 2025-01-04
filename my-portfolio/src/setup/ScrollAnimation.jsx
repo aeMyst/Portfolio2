@@ -1,5 +1,4 @@
 import React, { useRef } from 'react';
-import '../elements/ScrollAnimation.css'; 
 
 const AnimatedSection = ({ children }) => {
   const sectionRef = useRef(null);

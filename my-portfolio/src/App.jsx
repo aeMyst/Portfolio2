@@ -16,8 +16,8 @@ const App = () => {
 
         {/* Main Content */}
         <main className="flex-grow flex flex-col items-center justify-center">
-          <div className="w-full max-w-8xl px-10"> {/* Increased width and padding */}
-            <div className="mb-24"> {/* Increased bottom margin for spacing */}
+          <div className="w-full max-w-8xl px-10"> 
+            <div className="mb-24"> 
               <AnimatedSection>
                 <Home />
               </AnimatedSection>
