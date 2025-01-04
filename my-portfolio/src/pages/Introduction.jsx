@@ -119,7 +119,6 @@ const Introduction = () => {
           <img src={starIcon} alt="Star Icon" class="section-icon" />
           Hobbies
         </h3>
-          <p>Another example of a card description.</p>
         </div>
         {/* Card 4 */}
         <div className="card large map-container">
