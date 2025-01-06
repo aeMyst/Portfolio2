@@ -1,0 +1,38 @@
+.HistoryCard {
+  background: #1b1b1b;
+  border-radius: 30px;
+  position: relative;
+  padding: 24px;
+  font-family: 'Poppins', sans-serif;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+.HistoryCard::after {
+  content: '';
+  position: absolute;
+  inset: 0; 
+  border-radius: 30px; 
+  padding: 2px; 
+  background: linear-gradient(135deg, #14ffe9, #ffeb3b, #ff00e0); 
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude; 
+  z-index: 1; 
+  pointer-events: none; 
+}
+
+.HistoryCard:hover {
+  box-shadow: 0 0 40px 20px rgba(20, 255, 233, 0.05),
+              0 0 60px 30px rgba(255, 235, 59, 0.05),
+              0 0 80px 40px rgba(255, 0, 224, 0.05);
+}
+
+/* Text Alignment for Left and Right */
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}

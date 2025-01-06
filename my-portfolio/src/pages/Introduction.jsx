@@ -62,7 +62,7 @@ const Introduction = () => {
   return (
     <section
       id="about"
-      className="min-h-screen p-8 bg-custom-dark font-[Poppins]"
+      className="min-h-screen p-8 bg-custom-dark bg-custom-dark font-[Poppins]"
     >
       <h2 className="text-4xl font-bold mb-4 text-center">ABOUT ME</h2>
       <div className="cards-container">

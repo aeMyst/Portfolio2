@@ -13,6 +13,6 @@ export default {
         sans: ['Poppins', 'Inter', 'system-ui', 'Avenir', 'Helvetica', 'Arial', 'sans-serif'],
       },
   },
-    plugins: [],
+    plugins: [require('@tailwindcss/typography')],
   },
 };
