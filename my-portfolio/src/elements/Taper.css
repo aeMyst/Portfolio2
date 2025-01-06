@@ -36,7 +36,7 @@ h3 {
 .tape {
     display: flex; 
     white-space: nowrap;
-    animation: 20s slide linear infinite;
+    animation: 15s slide linear infinite;
     width: max-content; 
 }
 
