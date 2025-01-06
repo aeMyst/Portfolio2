@@ -5,8 +5,12 @@
   padding: 24px;
   font-family: 'Poppins', sans-serif;
   overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+  transition: all 0.6s ease-in-out; 
+  cursor: pointer;
+  transform: scale(1); 
+  opacity: 1;
 }
+
 .HistoryCard::after {
   content: '';
   position: absolute;
@@ -28,11 +32,44 @@
               0 0 80px 40px rgba(255, 0, 224, 0.05);
 }
 
-/* Text Alignment for Left and Right */
+.HistoryCard.expanded {
+  transform: scale(1.2); /* Final size */
+  opacity: 1; /* Maintain full opacity */
+  z-index: 20; /* Ensure expanded card stays on top */
+  box-shadow: 0 0 40px rgba(20, 255, 233, 0.2),
+              0 0 60px rgba(255, 235, 59, 0.2),
+              0 0 80px rgba(255, 0, 224, 0.2);
+}
+
+.HistoryCard-content {
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+}
+
+.HistoryCard.expanded .HistoryCard-content {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.HistoryCard.collapsed {
+  opacity: 0;
+  transform: scale(0.8); /* Shrink slightly during collapse */
+}
+
 .text-left {
   text-align: left;
 }
 
 .text-right {
   text-align: right;
+}
+
+.opacity-0 {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.opacity-100 {
+  opacity: 1;
 }
