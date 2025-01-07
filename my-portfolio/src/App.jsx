@@ -20,23 +20,23 @@ const App = () => {
 
         {/* Main Content */}
         <main className="flex-grow flex flex-col items-center justify-center">
-          <div className="w-full max-w-8xl px-10"> 
-            <div className="mb-24"> 
+          <div className="w-full max-w-8xl px-4 sm:px-6 md:px-10 lg:px-12"> 
+            <div className="mb-16 sm:mb-20 md:mb-24"> 
               <AnimatedSection>
                 <Home />
               </AnimatedSection>
             </div>
-            <div className="mb-24">
+            <div className="mb-16 sm:mb-20 md:mb-24">
               <AnimatedSection>
                 <Introduction />
               </AnimatedSection>
             </div>
-            <div className="mb-24">
+            <div className="mb-16 sm:mb-20 md:mb-24">
               <AnimatedSection>
                 <HistorySection />
               </AnimatedSection>
             </div>
-            <div className="mb-24">
+            <div className="mb-16 sm:mb-20 md:mb-24">
               <AnimatedSection>
                 <Projects />
               </AnimatedSection>
