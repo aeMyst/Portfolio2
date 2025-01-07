@@ -2,13 +2,24 @@
   background: #1b1b1b;
   border-radius: 30px;
   position: relative;
-  padding: 24px;
+  padding: 32px;
   font-family: 'Poppins', sans-serif;
   overflow: hidden;
-  transition: all 0.6s ease-in-out; 
+  transition: all 0.5s ease-in-out; 
   cursor: pointer;
   transform: scale(1); 
   opacity: 1;
+  width: 49%;
+}
+
+.HistoryCard.expanded-left {
+  transform: translateX(-18%); /* Expand width to the left */
+  width: 60%; /* New width when expanded */
+}
+
+.HistoryCard.expanded-right {
+  transform: translateX(18%); /* Expand width to the right */
+  width: 60%; /* New width when expanded */
 }
 
 .HistoryCard::after {
@@ -32,24 +43,19 @@
               0 0 80px 40px rgba(255, 0, 224, 0.05);
 }
 
-.HistoryCard.expanded {
-  transform: scale(1.2); /* Final size */
-  opacity: 1; /* Maintain full opacity */
-  z-index: 20; /* Ensure expanded card stays on top */
-  box-shadow: 0 0 40px rgba(20, 255, 233, 0.2),
-              0 0 60px rgba(255, 235, 59, 0.2),
-              0 0 80px rgba(255, 0, 224, 0.2);
-}
-
 .HistoryCard-content {
   opacity: 0;
-  transform: translateX(-30px);
-  transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+  transform: translateX(0); /* Center content */
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
 }
 
-.HistoryCard.expanded .HistoryCard-content {
-  opacity: 1;
-  transform: translateX(0);
+/* Adjust animations for left or right side */
+.HistoryCard.expanded.text-left .HistoryCard-content {
+  transform: translateX(30px); /* Slide in from the right for cards on the left */
+}
+
+.HistoryCard.text-right .HistoryCard-content {
+  transform: translateX(-30px); /* Slide in from the left for cards on the right */
 }
 
 .HistoryCard.collapsed {
@@ -72,4 +78,14 @@
 
 .opacity-100 {
   opacity: 1;
+}
+
+.click-me-button {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.click-me-button.opacity-0 {
+  opacity: 0;
+  pointer-events: none; /* Prevent interaction when hidden */
 }
