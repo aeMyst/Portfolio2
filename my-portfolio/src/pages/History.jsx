@@ -79,7 +79,7 @@ const History = () => {
                     <div
                       className={`click-me-button absolute top-4 ${
                         index % 2 === 0 ? 'left-4' : 'right-4'
-                      } bg-blue-500 text-white text-xs px-2 py-1 rounded animate-pulse transition-opacity duration-500 ${
+                      } bg-transparent text-white font-bold text-xs px-2 py-1 rounded animate-pulse transition-opacity duration-500 ${
                         expandedCard === index ? 'opacity-0' : 'opacity-100'
                       }`}
                       style={{ fontFamily: 'Poppins, sans-serif' }}
