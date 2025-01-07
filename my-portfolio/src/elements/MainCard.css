@@ -19,6 +19,8 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease; 
 }
 
+
+
 .card::after {
   content: '';
   position: absolute;
@@ -40,7 +42,6 @@
               0 0 80px 40px rgba(255, 0, 224, 0.05);
 }
 
-/* Custom sizes for individual cards */
 .card.small {
     width: 350px;
     height: 350px;
@@ -71,7 +72,6 @@
     border-radius: 20px;
 }
 
-/* Align the star icon inline with the h3 */
 h3.title-with-icon {
   display: inline-flex;
   align-items: center;
@@ -127,7 +127,11 @@ h3.title-with-icon {
 
   
   .map-container {
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%; /* Match the card's width */
   }
   
   .map-image {
@@ -147,13 +151,28 @@ h3.title-with-icon {
   
   .location-pin {
     position: absolute;
-    top: 25%; 
+    top: 50%; 
     left: 50%; 
     transform: translate(-50%, -50%); 
-    width: 40px; 
+    width: 30px; 
     height: auto;
     pointer-events: none; 
     animation: bounce 1.5s infinite ease-in-out; 
+  }
+
+  @media (max-width: 768px) {
+    .cards-container {
+      gap: 20px;
+    }
+  
+    .card {
+      width: 100%; 
+      padding: 16px; 
+    }
+  
+    .map-image {
+      max-height: 300px;
+    }
   }
 
   

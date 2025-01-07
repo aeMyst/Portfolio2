@@ -50,11 +50,11 @@
 }
 
 .card p, .card h3 {
-    margin-bottom: 10px; /* Increase margin between elements */
+    margin-bottom: 10px; 
   }
   
   .card .Projectbutton {
-    margin-top: 10px; /* Add space between the text and the button */
+    margin-top: 10px; 
   }
 
 
