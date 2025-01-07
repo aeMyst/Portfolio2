@@ -46,6 +46,11 @@
     height: 350px;
 }
 
+.card.medium-small {
+  width: 400px;
+  height: 375px;
+}
+
 .card.medium {
     width: 600px;
     height: 365px;
