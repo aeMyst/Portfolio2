@@ -44,7 +44,7 @@ const History = () => {
   };
 
   return (
-    <div id="history" className="min-h-screen bg-custom-dark px-6 py-20">
+    <div id="history" className="min-h-screen bg-transparent px-6 py-20">
       <section id="timeline" className="min-h-screen flex flex-col items-center">
         <h2 className="text-4xl font-bold text-white mb-10">EXPERIENCE</h2>
         <div className="relative w-full max-w-4xl">

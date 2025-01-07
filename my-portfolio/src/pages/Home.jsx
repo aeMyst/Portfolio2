@@ -11,7 +11,7 @@ const Home = () => {
   return (
     <section
       id="home"
-      className="h-screen flex flex-col items-center justify-center bg-custom-dark text-white"
+      className="h-screen flex flex-col items-center justify-center bg-transparent text-white"
     >
       <div class="wrapper">
         <div class="display">

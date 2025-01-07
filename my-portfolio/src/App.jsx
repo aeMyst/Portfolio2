@@ -6,11 +6,15 @@ import Projects from './pages/Projects';
 import Header from './pages/Header';
 import Footer from './pages/Footer';
 import AnimatedSection from './setup/ScrollAnimation';
+import StarsCanvas from './setup/Stars';
 
 const App = () => {
   return (
-    <div className="bg-custom-dark">
-      <div className="flex flex-col min-h-screen">
+    <div className="relative bg-custom-dark">
+      {/* Add the StarsCanvas as a background */}
+      <StarsCanvas />
+      
+      <div className="relative flex flex-col min-h-screen z-[30]">
         {/* Header */}
         <Header />
 
