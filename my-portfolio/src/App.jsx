@@ -11,7 +11,7 @@ import StarsCanvas from './setup/Stars';
 const App = () => {
   return (
     <div className="relative bg-custom-dark">
-      {/* Add the StarsCanvas as a background */}
+      {/*StarsCanvas as a background */}
       <StarsCanvas />
       
       <div className="relative flex flex-col min-h-screen z-[30]">
