@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../elements/MainCard.css';
 import '../elements/Taper.css';
 import cardImage from '../assets/map.png';
@@ -28,6 +28,7 @@ import tailwindIcon from '../assets/logos/tailwind.svg';
 import vscodeIcon from '../assets/logos/vscode.svg';
 
 const Introduction = () => {
+
   const tools = [
     { name: 'HTML', icon: htmlIcon },
     { name: 'CSS', icon: cssIcon },
@@ -63,11 +64,16 @@ const Introduction = () => {
     { name: 'Fashion', description: '👔' },
     { name: 'Food', description: '🥡' },
     { name: 'Guitar', description: '🎸' },
-
   ];
 
   const tapeItems = [...tools, ...tools];
   const tapeReverse = [...technologies, ...technologies];
+
+  const [isIntroExpanded, setIsIntroExpanded] = useState(false);
+
+  const toggleIntroExpand = () => {
+    setIsIntroExpanded((prev) => !prev);
+  };
 
   return (
     <section
@@ -76,8 +82,8 @@ const Introduction = () => {
     >
       <h2 className="text-4xl font-bold mb-4 text-center">ABOUT ME</h2>
       <div className="cards-container">
-        {/* Card 1 */}
-        <div className="card small">
+        {/* Card 1 - Introduction */}
+        <div className="card small introduction-card" onClick={toggleIntroExpand}>
           <h3 className="title-with-icon">
             <img src={starIcon} alt="Star Icon" className="section-icon" />
             Introduction
@@ -87,9 +93,16 @@ const Introduction = () => {
             I am passionate about coding, databases, and transforming ideas into reality. 
             I am actively seeking CO-OP opportunities to apply my skills and contribute to solving real-world problems.
           </p>
+
+          {/* Show extra content only if expanded */}
+          <div className={`expandable-content ${isIntroExpanded ? 'expanded' : ''}`}>
+            <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+          </div>
         </div>
 
-        {/* Card 2 */}
+        {/* Card 2 - Skillsets */}
         <div className="card skillset">
           <h3 className="title-with-icon">
             <img src={starIcon} alt="Star Icon" className="section-icon" />
@@ -123,27 +136,27 @@ const Introduction = () => {
           </div>
         </div>
 
-        {/* Card 3 */}
+        {/* Card 3 - Hobbies */}
         <div className="card medium">
           <h3 className="title-with-icon">
-          <img src={starIcon} alt="Star Icon" className="section-icon" />
+            <img src={starIcon} alt="Star Icon" className="section-icon" />
             Hobbies
           </h3>
-        <div className="hobbies-container">
-          <div className="hobbies-card">
-            {hobbies.map((hobby, index) => (
-            <div key={index} className="hobby-item">
-              <p>
-                {hobby.name} 
-                {hobby.description}
-              </p>
+          <div className="hobbies-container">
+            <div className="hobbies-card">
+              {hobbies.map((hobby, index) => (
+                <div key={index} className="hobby-item">
+                  <p>
+                    {hobby.name}
+                    {hobby.description}
+                  </p>
+                </div>
+              ))}
             </div>
-            ))}
           </div>
         </div>
-      </div>
 
-        {/* Card 4 */}
+        {/* Card 4 - Map */}
         <div className="card large map-container">
           <img src={cardImage} alt="Map" className="map-image" />
           <img src={locationPin} alt="Location Pin" className="location-pin" />
@@ -152,6 +165,5 @@ const Introduction = () => {
     </section>
   );
 };
-
 
 export default Introduction;

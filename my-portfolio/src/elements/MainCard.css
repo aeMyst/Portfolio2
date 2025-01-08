@@ -1,217 +1,214 @@
 .cards-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 35px;
-    justify-content: center;
-}
-  
-.card {
-  background: #1b1b1b;
-  border-radius: 30px; 
-  position: relative; 
-  padding: 24px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  font-family: 'Poppins', sans-serif;
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+  flex-wrap: wrap;
+  gap: 35px;
+  justify-content: center;
 }
 
-
+.card {
+background: #1b1b1b;
+border-radius: 30px; 
+position: relative; 
+padding: 24px;
+display: flex;
+flex-direction: column;
+align-items: center;
+text-align: center;
+font-family: 'Poppins', sans-serif;
+overflow: hidden;
+transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
 
 .card::after {
-  content: '';
-  position: absolute;
-  inset: 0; 
-  border-radius: 30px; 
-  padding: 2px; 
-  background: linear-gradient(135deg, #14ffe9, #ffeb3b, #ff00e0); 
-  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude; 
-  z-index: 1; 
-  pointer-events: none; 
+content: '';
+position: absolute;
+inset: 0; 
+border-radius: 30px; 
+padding: 2px; 
+background: linear-gradient(135deg, #14ffe9, #ffeb3b, #ff00e0); 
+-webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+-webkit-mask-composite: xor;
+mask-composite: exclude; 
+z-index: 1; 
+pointer-events: none; 
 }
 
 .card:hover {
-  box-shadow: 0 0 40px 20px rgba(20, 255, 233, 0.05),
-              0 0 60px 30px rgba(255, 235, 59, 0.05),
-              0 0 80px 40px rgba(255, 0, 224, 0.05);
+box-shadow: 
+  0 0 40px 20px rgba(20, 255, 233, 0.05),
+  0 0 60px 30px rgba(255, 235, 59, 0.05),
+  0 0 80px 40px rgba(255, 0, 224, 0.05);
 }
 
+/* 
+Replace fixed height with min-height so the card 
+can expand naturally.
+*/
 .card.small {
-    width: 350px;
-    height: 350px;
+width: 350px;
+min-height: 350px;
+/* Removed: height: 350px; */
 }
 
 .card.medium-small {
-  width: 425px;
-  height: 375px;
+width: 425px;
+height: 375px;
 }
 
 .card.medium {
-    width: 600px;
-    height: 365px;
+width: 600px;
+height: 365px;
 }
+
 .card.skillset {
-    width: 750px;
-    height: 350px;
+width: 750px;
+height: 350px;
 }
 
 .card.large {
-    width: 500px;
-    height: 365px;
+width: 500px;
+height: 365px;
 }
 
+/* Images inside cards */
 .card img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 20px;
+max-width: 100%;
+height: auto;
+border-radius: 20px;
 }
 
+/* Section title styling */
 h3.title-with-icon {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px; 
-  font-size: 1.5rem;
-  color: #fff;
-  font-weight: bold; 
-  margin-bottom: 8px;
+display: inline-flex;
+align-items: center;
+gap: 8px; 
+font-size: 1.5rem;
+color: #fff;
+font-weight: bold; 
+margin-bottom: 8px;
 }
 
 .section-icon {
-  width: 40px; 
-  height: 20px;
+width: 40px; 
+height: 20px;
 }
 
 .card p {
-    font-size: 1rem;
-    color: #ccc;
-    margin-bottom: 0;
+font-size: 1rem;
+color: #ccc;
+margin-bottom: 0;
 }
 
+/* Map container specifics */
+.map-container {
+position: relative;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+width: 100%;
+}
 
-  .map-container {
-    position: relative;
-  }
-  
-  .map-image {
-    width: 100%; 
-    height: auto;
-    border-radius: 10px; 
-  }
-  
-  @keyframes bounce {
-    0%, 100% {
-      transform: translate(-50%, -50%) translateY(0); 
-    }
-    50% {
-      transform: translate(-50%, -50%) translateY(-10px);
-    }
-  }
-  
-  .location-pin {
-    position: absolute;
-    top: 25%; 
-    left: 50%; 
-    transform: translate(-50%, -50%); 
-    width: 40px; 
-    height: auto;
-    pointer-events: none; 
-    animation: bounce 1.5s infinite ease-in-out; 
-  }
+.map-image {
+width: 100%; 
+height: auto;
+border-radius: 10px; 
+}
 
+@keyframes bounce {
+0%, 100% {
+  transform: translate(-50%, -50%) translateY(0); 
+}
+50% {
+  transform: translate(-50%, -50%) translateY(-10px);
+}
+}
 
-  
-  .map-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%; /* Match the card's width */
-  }
-  
-  .map-image {
-    width: 100%; 
-    height: auto;
-    border-radius: 10px; 
-  }
-  
-  @keyframes bounce {
-    0%, 100% {
-      transform: translate(-50%, -50%) translateY(0); 
-    }
-    50% {
-      transform: translate(-50%, -50%) translateY(-10px);
-    }
-  }
-  
-  .location-pin {
-    position: absolute;
-    top: 45%; 
-    left: 50%; 
-    transform: translate(-50%, -50%); 
-    width: 30px; 
-    height: auto;
-    pointer-events: none; 
-    animation: bounce 1.5s infinite ease-in-out; 
-  }
-  
-  @media (max-width: 768px) {
-    .cards-container {
-      gap: 20px;
-    }
-  
-    .card {
-      width: 100%; 
-      padding: 16px; 
-    }
-  
-    .map-image {
-      max-height: 300px;
-    }
-  }
+.location-pin {
+position: absolute;
+top: 45%; 
+left: 50%; 
+transform: translate(-50%, -50%); 
+width: 30px; 
+height: auto;
+pointer-events: none; 
+animation: bounce 1.5s infinite ease-in-out; 
+}
 
-  .hobbies-container {
-    overflow: hidden;
-    position: relative;
-    padding: 20px;
-    width: 100%;
+/* Responsive tweaks */
+@media (max-width: 768px) {
+.cards-container {
+  gap: 20px;
+}
+
+.card {
+  width: 100%; 
+  padding: 16px; 
+}
+
+.map-image {
+  max-height: 300px;
+}
+}
+
+/* Hobbies styling */
+.hobbies-container {
+overflow: hidden;
+position: relative;
+padding: 20px;
+width: 100%;
 }
 
 .hobbies-card {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    width: 100%;
-    padding: 50;
-    margin: 50;
+display: flex;
+flex-wrap: wrap;
+gap: 1rem;
+width: 100%;
+padding: 50;
+margin: 50;
 }
 
 .hobby-item {
-    background-color: rgba(0, 0, 0, 0.2);
-    padding: 15px;
-    border-radius: 10px;
-    min-width: 150px;
-    transition: transform 0.2s ease;
+background-color: rgba(0, 0, 0, 0.2);
+padding: 15px;
+border-radius: 10px;
+min-width: 150px;
+transition: transform 0.2s ease;
 }
 
 .hobby-item:hover {
-    transform: translateY(-3.5px);
-    background-color: rgba(0, 0, 0, 0.3);
+transform: translateY(-3.5px);
+background-color: rgba(0, 0, 0, 0.3);
 }
 
 .hobby-item p {
-    font-size: 16px;
-    color: #fff;
-    margin: 0;
-    white-space: nowrap;
+font-size: 16px;
+color: #fff;
+margin: 0;
+white-space: nowrap;
 }
 
-  
+.introduction-card {
+cursor: pointer;
+transition: all 0.5s ease;
+}
 
+.introduction-card.expanded {
+width: 600px; 
+min-height: 500px; 
+}
 
-  
+.expandable-content {
+max-height: 0;
+overflow: hidden;
+opacity: 0;
+transition: 
+  max-height 0.6s ease,
+  opacity 0.4s ease;
+}
+
+.expandable-content.expanded {
+max-height: 500px;
+opacity: 1;
+}
