@@ -10,25 +10,19 @@ const History = () => {
       title: 'Server/Bartender',
       company: "Roy's Korean Kitchen",
       date: 'September 2024 - Present',
-      moreDetails: 'Boosted sales by 10% through reporting, promotion analysis, and efficient guest planning. Managed high-volume guest services and implemented strategies to improve overall customer satisfaction.',
+      moreDetails: 'Compiled end-of-day reports and analyzed relevant sales data from 25+ daily transactions, applying attention to detail and organizational skills to deliver concise summaries to the supervisor. Collaborated with coworkers to gather insights on special feature items, leveraging communication and analytical skills to drive a 10% increase in sales. Counted headcounts for up to 100 expected customers and reorganized tables and settings, demonstrating planning and adaptability to ensure an efficient guest experience upon arrival.',
     },
     {
       title: 'Server',
       company: 'Baekjeong Korean BBQ House',
       date: 'June 2022 - February 2024',
-      moreDetails: 'Ensured quality compliance and managed high-volume service, boosting efficiency and maintaining a 4.5-star rating. Collaborated with team members to deliver exceptional dining experiences during peak hours.',
+      moreDetails: 'Performed necessary opening and closing duties, organizing setups and documenting specific tasks for the next shift, allowing smooth operations and reducing setup times by 20% for the following day. Conducted quality checks on 50+ products and services per shift, ensuring compliance with company standards and consistency, contributing to a 4.5-star rating on Google reviews. Managed up to 30 tables per shift, processing over 100 orders daily while coordinating with kitchen staff to ensure timely service and exceptional dining experiences.',
     },
     {
       title: 'Keyholder',
       company: 'Truedan (Jenjudan)',
       date: 'June 2021 - June 2022',
-      moreDetails: 'Streamlined operations and ensured accurate cash handling, reducing shortages and expenses. Trained new employees on operational protocols and customer service best practices.',
-    },
-    {
-      title: 'Customer Service Specialist',
-      company: "McDonald's",
-      date: 'June 2018 - June 2022',
-      moreDetails: 'Boosted customer satisfaction, engagement, and repeat visits through effective communication and training. Improved team efficiency by introducing a streamlined approach to handling large orders.',
+      moreDetails: 'Managed restocking of inventory, tracking product levels to maintain optimal stock, reducing shortages by 10%, and ensuring high-demand items were always available. Independently managed the store during shifts, overseeing operations, addressing customer inquiries, and maintaining smooth service, while reducing operational expenses by 50% per shift. Entrusted with store keys and cash management, performing opening and closing duties, balancing registers with 99% accuracy, and securely handling over $250 in daily transactions.',
     },
   ];
 
@@ -111,13 +105,16 @@ const History = () => {
                       {item.date}
                     </p>
                     <div
-                      className={`HistoryCard-content mt-4 text-sm text-gray-400 text-left transition-all duration-500 ${
+                      className={`HistoryCard-content mt-4 text-sm text-white text-left transition-all duration-500 ${
                         expandedCard === index ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-5'
                       }`}
                     >
                       {item.moreDetails.split('. ').map((sentence, idx) => (
                         <p key={idx} className="more-details-line">
-                          • {sentence.trim()}.
+                          <strong>•</strong>
+                            {sentence.trim()}.
+                            <br />
+                            <br />
                         </p>
                       ))}
                     </div>
