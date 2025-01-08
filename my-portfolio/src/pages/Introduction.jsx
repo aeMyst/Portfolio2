@@ -133,7 +133,7 @@ const Introduction = () => {
           </h3>
           <ul className="list-disc text-left pl-6 space-y-2">
             {hobbies.map((hobby, index) => (
-              <li key={index} className="text-gray-300">
+              <li key={index} className="text-white">
                 <strong className="text-white">{hobby.name}</strong>: {hobby.description}
               </li>
             ))}
