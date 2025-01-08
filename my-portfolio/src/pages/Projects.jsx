@@ -9,7 +9,7 @@ const Projects = () => {
       description: "A portfolio website that includes information about me.",
       technologies: "React, TailwindCSS, HTML, CSS, Netlify",
       gif: "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/8a2da741492897.57a8a0b0747b4.gif",
-      github: "https://github.com/username/petpals",
+      github: "https://github.com/aeMyst/Portfolio2",
     },
 
     {
@@ -17,14 +17,14 @@ const Projects = () => {
       description: "An anonymous blog platform with personalized AI-powered content.",
       technologies: "Firebase, React, JavaScript, Express.js, Gemini AI, Axios, Figma",
       gif: "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/8a2da741492897.57a8a0b0747b4.gif",
-      github: "https://github.com/username/petpals",
+      github: "https://github.com/ryanwoong/PetPals",
     },
     {
       name: "RevRentals Motorcycle Marketplace",
       description: "A peer-to-peer marketplace revolutionizing motorcycle rentals.",
       technologies: "Flutter, Dart, Figma, Firebase, SQL",
       gif: "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/8a2da741492897.57a8a0b0747b4.gif",
-      github: "https://github.com/username/revrentals",
+      github: "https://github.com/aeMyst/RevRentals",
     },
     {
       name: "Minigame Online Portal",
@@ -38,7 +38,7 @@ const Projects = () => {
       description: "A smart recipe generator using OpenAI for personalized recipes.",
       technologies: "HTML, CSS, JavaScript, Python, Flask, SQLite, Figma, OpenAI",
       gif: "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/8a2da741492897.57a8a0b0747b4.gif",
-      github: "https://github.com/username/chefai",
+      github: "https://github.com/arcleah/ai-chef",
     },
     {
       name: "Celebrity Capability Data Survey",
