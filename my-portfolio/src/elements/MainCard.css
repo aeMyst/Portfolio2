@@ -159,7 +159,7 @@ h3.title-with-icon {
     pointer-events: none; 
     animation: bounce 1.5s infinite ease-in-out; 
   }
-
+  
   @media (max-width: 768px) {
     .cards-container {
       gap: 20px;

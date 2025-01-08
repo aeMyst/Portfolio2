@@ -27,7 +27,6 @@ import pythonIcon from '../assets/logos/python.svg';
 import tailwindIcon from '../assets/logos/tailwind.svg';
 import vscodeIcon from '../assets/logos/vscode.svg';
 
-
 const Introduction = () => {
   const tools = [
     { name: 'HTML', icon: htmlIcon },
@@ -56,6 +55,17 @@ const Introduction = () => {
     { name: 'vsCode', icon: vscodeIcon },
   ];
 
+  const hobbies = [
+    { name: 'Gaming', description: '🕹️' },
+    { name: 'Keyboards', description: '⌨️' },
+    { name: 'Snowboarding', description: '🏂' },
+    { name: 'Motorcycling', description: '🏍️' },
+    { name: 'Fashion', description: '👔' },
+    { name: 'Food', description: '🥡' },
+    { name: 'Guitar', description: '🎸' },
+
+  ];
+
   const tapeItems = [...tools, ...tools];
   const tapeReverse = [...technologies, ...technologies];
 
@@ -68,22 +78,23 @@ const Introduction = () => {
       <div className="cards-container">
         {/* Card 1 */}
         <div className="card small">
-        <h3 class="title-with-icon">
-          <img src={starIcon} alt="Star Icon" class="section-icon" />
-          Introduction
-        </h3>
+          <h3 className="title-with-icon">
+            <img src={starIcon} alt="Star Icon" className="section-icon" />
+            Introduction
+          </h3>
           <p>
             My name is Peter Tran, and I am a Computer Science student at the University of Calgary. 
             I am passionate about coding, databases, and transforming ideas into reality. 
             I am actively seeking CO-OP opportunities to apply my skills and contribute to solving real-world problems.
           </p>
         </div>
+
         {/* Card 2 */}
         <div className="card skillset">
-        <h3 class="title-with-icon">
-          <img src={starIcon} alt="Star Icon" class="section-icon" />
-          Skillsets
-        </h3>
+          <h3 className="title-with-icon">
+            <img src={starIcon} alt="Star Icon" className="section-icon" />
+            Skillsets
+          </h3>
           <div className="tape-container">
             {/* Original Tape */}
             <div className="tape">
@@ -113,13 +124,22 @@ const Introduction = () => {
             </div>
           </div>
         </div>
+
         {/* Card 3 */}
         <div className="card medium">
-        <h3 class="title-with-icon">
-          <img src={starIcon} alt="Star Icon" class="section-icon" />
-          Hobbies
-        </h3>
+          <h3 className="title-with-icon">
+            <img src={starIcon} alt="Star Icon" className="section-icon" />
+            Hobbies
+          </h3>
+          <ul className="list-disc text-left pl-6 space-y-2">
+            {hobbies.map((hobby, index) => (
+              <li key={index} className="text-gray-300">
+                <strong className="text-white">{hobby.name}</strong>: {hobby.description}
+              </li>
+            ))}
+          </ul>
         </div>
+
         {/* Card 4 */}
         <div className="card large map-container">
           <img src={cardImage} alt="Map" className="map-image" />
