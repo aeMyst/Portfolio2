@@ -111,7 +111,7 @@ const History = () => {
                     >
                       {item.moreDetails.split('. ').map((sentence, idx) => (
                         <p key={idx} className="more-details-line">
-                          <strong>•</strong>
+                          <strong>• </strong>
                             {sentence.trim()}.
                             <br />
                             <br />
