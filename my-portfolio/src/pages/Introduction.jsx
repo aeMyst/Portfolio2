@@ -96,7 +96,6 @@ const Introduction = () => {
             Skillsets
           </h3>
           <div className="tape-container">
-            {/* Original Tape */}
             <div className="tape">
               {tapeItems.map((tech, index) => (
                 <div key={index} className="tape-item">
@@ -109,7 +108,6 @@ const Introduction = () => {
                 </div>
               ))}
             </div>
-            {/* Reverse Tape */}
             <div className="tape reverse">
               {tapeReverse.map((tech, index) => (
                 <div key={index} className="tape-item">
@@ -128,17 +126,22 @@ const Introduction = () => {
         {/* Card 3 */}
         <div className="card medium">
           <h3 className="title-with-icon">
-            <img src={starIcon} alt="Star Icon" className="section-icon" />
+          <img src={starIcon} alt="Star Icon" className="section-icon" />
             Hobbies
           </h3>
-          <ul className="list-disc text-left pl-6 space-y-2">
+        <div className="hobbies-container">
+          <div className="hobbies-card">
             {hobbies.map((hobby, index) => (
-              <li key={index} className="text-white">
-                <strong className="text-white">{hobby.name}</strong>: {hobby.description}
-              </li>
+            <div key={index} className="hobby-item">
+              <p>
+                {hobby.name} 
+                {hobby.description}
+              </p>
+            </div>
             ))}
-          </ul>
+          </div>
         </div>
+      </div>
 
         {/* Card 4 */}
         <div className="card large map-container">
@@ -149,5 +152,6 @@ const Introduction = () => {
     </section>
   );
 };
+
 
 export default Introduction;

@@ -175,6 +175,42 @@ h3.title-with-icon {
     }
   }
 
+  .hobbies-container {
+    overflow: hidden;
+    position: relative;
+    padding: 20px;
+    width: 100%;
+}
+
+.hobbies-card {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    width: 100%;
+    padding: 50;
+    margin: 50;
+}
+
+.hobby-item {
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    border-radius: 10px;
+    min-width: 150px;
+    transition: transform 0.2s ease;
+}
+
+.hobby-item:hover {
+    transform: translateY(-3.5px);
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.hobby-item p {
+    font-size: 16px;
+    color: #fff;
+    margin: 0;
+    white-space: nowrap;
+}
+
   
 
 
