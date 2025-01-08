@@ -97,15 +97,17 @@ const Projects = () => {
               {project.description}
             </p>
 
-            {/* GitHub Link Button */}
-            <a
-              href={project.github}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="Projectbutton absolute bottom-2"
-            >
-              View on GitHub
-            </a>
+            <div className="flex justify-center items-center space-x-4">
+              {/* GitHub Link Button */}
+              <a
+                href={project.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="Projectbutton"
+              >
+                View on GitHub
+              </a>
+            </div>
           </div>
         ))}
       </div>
