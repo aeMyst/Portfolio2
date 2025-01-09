@@ -1,15 +1,23 @@
 /* Contact Card Styling */
 .contact-container {
-    width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
   }
   
   /* Rocket Container */
   .rocket-container {
-    width: 100%;
-    position: relative;
+    flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
+    max-width: 500px;
+    min-width: 300px;
   }
   
   .rocket {
@@ -272,4 +280,15 @@
       filter: hue-rotate(360deg);
     }
   }
-  
+
+  @media (max-width: 768px) {
+    
+    .contact-container {
+      flex-direction: column;
+      gap: 30px;
+      padding: 10px;
+    }
+    .contact-card {
+      padding: 15px;
+    }
+  }
