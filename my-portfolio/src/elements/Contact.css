@@ -281,14 +281,16 @@
     }
   }
 
-  @media (max-width: 768px) {
-    
+  @media (max-width: 1024px) {
     .contact-container {
-      flex-direction: column;
-      gap: 30px;
-      padding: 10px;
+      justify-content: center; /* Center the container */
+      align-items: center; /* Center the card vertically */
+      flex-direction: column; /* Stack items vertically */
     }
+  
     .contact-card {
-      padding: 15px;
+      width: 100%; /* Take full width on smaller screens */
+      max-width: 500px; /* Optional: Limit max width for better layout */
+      margin: 0 auto; /* Center horizontally */
     }
   }

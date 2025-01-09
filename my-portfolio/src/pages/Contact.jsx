@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../elements/Contact.css';
 import '../elements/MainCard.css';
 
@@ -12,6 +12,17 @@ const ContactMe = () => {
   });
 
   const [statusMessage, setStatusMessage] = useState('');
+  const [isLargeScreen, setIsLargeScreen] = useState(true); 
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsLargeScreen(window.innerWidth > 1024); 
+    };
+
+    handleResize(); 
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   // Handle form input changes
   const handleInputChange = (e) => {
@@ -26,24 +37,17 @@ const ContactMe = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Validate inputs
     if (!formData.name || !formData.email || !formData.message) {
       setStatusMessage('Please fill in all fields.');
       return;
     }
 
-    // Send form data using EmailJS
     emailjs
-      .send(
-        'service_3mkpoi5', 
-        'template_cj2hwjb', 
-        formData,
-        'iOs1drhLW9QM6NDM_'
-      )
+      .send('service_3mkpoi5', 'template_cj2hwjb', formData, 'iOs1drhLW9QM6NDM_')
       .then(
         () => {
           setStatusMessage('Message sent successfully!');
-          setFormData({ name: '', email: '', message: '' }); // Reset form
+          setFormData({ name: '', email: '', message: '' });
         },
         (error) => {
           setStatusMessage('Failed to send message. Please try again.');
@@ -54,33 +58,39 @@ const ContactMe = () => {
 
   return (
     <section id="contact" className="min-h-screen bg-transparent text-white flex items-center justify-center p-8">
-      <div className="w-full max-w-6xl flex flex-col lg:flex-row items-center justify-between gap-8">
+      <div
+        className={`w-full max-w-6xl flex items-center justify-between gap-8 ${
+          isLargeScreen ? 'lg:flex-row' : 'flex-col justify-center'
+        }`}
+      >
         {/* Rocket Container */}
-        <div
-          className="relative w-full lg:w-1/2 flex justify-center items-center"
-          style={{ transform: 'translate(-85px, -125px)' }}
-        >
-          <div className="rocket">
-            <div className="rocket-body">
-              <div className="body"></div>
-              <div className="fin fin-left"></div>
-              <div className="fin fin-right"></div>
-              <div className="window"></div>
+        {isLargeScreen && (
+          <div
+            className="relative w-full lg:w-1/2 flex justify-center items-center rocket-container"
+            style={{ transform: 'translate(-85px, -125px)' }}
+          >
+            <div className="rocket">
+              <div className="rocket-body">
+                <div className="body"></div>
+                <div className="fin fin-left"></div>
+                <div className="fin fin-right"></div>
+                <div className="window"></div>
+              </div>
+              <div className="exhaust-flame"></div>
+              <ul className="exhaust-fumes">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+              </ul>
             </div>
-            <div className="exhaust-flame"></div>
-            <ul className="exhaust-fumes">
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-            </ul>
           </div>
-        </div>
+        )}
 
         {/* Contact Form */}
         <div className="w-full lg:w-1/2">
