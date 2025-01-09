@@ -80,6 +80,23 @@ const Header = () => {
           >
             Experience
           </label>
+
+          {/* Contact Me Tab */}
+          <input
+            value="contact"
+            name="navigation"
+            id="contact-tab"
+            type="radio"
+            className="input"
+          />
+          <label
+            htmlFor="contact-tab"
+            className="label cursor-pointer"
+            style={{ color: 'white' }} 
+            onClick={() => handleNavigation('contact')}
+          >
+            Contact Me
+          </label>
         </div>
       </div>
     </header>

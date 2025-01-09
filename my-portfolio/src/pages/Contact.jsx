@@ -35,8 +35,8 @@ const ContactMe = () => {
     // Send form data using EmailJS
     emailjs
       .send(
-        'service_3mkpoi5', // Replace with your EmailJS service ID
-        'template_cj2hwjb', // Replace with your EmailJS template ID
+        'service_3mkpoi5', 
+        'template_cj2hwjb', 
         formData,
         'iOs1drhLW9QM6NDM_'
       )
@@ -53,7 +53,7 @@ const ContactMe = () => {
   };
 
   return (
-    <section className="min-h-screen bg-transparent text-white flex items-center justify-center p-8">
+    <section id="contact" className="min-h-screen bg-transparent text-white flex items-center justify-center p-8">
       <div className="w-full max-w-6xl flex flex-col lg:flex-row items-center justify-between gap-8">
         {/* Rocket Container */}
         <div
