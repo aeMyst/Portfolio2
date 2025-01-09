@@ -12,7 +12,16 @@ export default {
       fontFamily: {
         sans: ['Poppins', 'Inter', 'system-ui', 'Avenir', 'Helvetica', 'Arial', 'sans-serif'],
       },
-  },
+      animation: {
+        'fade-in-out': 'fadeInOut 3s infinite',
+      },
+      keyframes: {
+        fadeInOut: {
+          '0%, 100%': {opacity: 0},
+          '50%': {opacity: 1},
+        },
+      },
+    },
     plugins: [require('@tailwindcss/typography')],
   },
 };
