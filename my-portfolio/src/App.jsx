@@ -1,10 +1,13 @@
 import React from 'react';
+
 import Home from './pages/Home';
 import Introduction from './pages/Introduction';
 import HistorySection from './pages/History';
 import Projects from './pages/Projects'; 
 import Header from './pages/Header';
+import Contact from './pages/Contact';
 import Footer from './pages/Footer';
+
 import AnimatedSection from './setup/ScrollAnimation';
 import StarsCanvas from './setup/Stars';
 
@@ -40,6 +43,11 @@ const App = () => {
               <AnimatedSection>
                 <Projects />
               </AnimatedSection>
+            </div>
+            <div className="mb-16 sm:mb-20 md:mb-24">
+              <animatedSection>
+                <Contact />
+              </animatedSection>
             </div>
           </div>
         </main>
