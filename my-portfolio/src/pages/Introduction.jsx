@@ -28,6 +28,7 @@ import tailwindIcon from '../assets/logos/tailwind.svg';
 import vscodeIcon from '../assets/logos/vscode.svg';
 
 const Introduction = () => {
+  const [introClicked, setIntroClicked] = useState(false); 
 
   const tools = [
     { name: 'HTML', icon: htmlIcon },
@@ -73,6 +74,7 @@ const Introduction = () => {
 
   const toggleIntroExpand = () => {
     setIsIntroExpanded((prev) => !prev);
+    setIntroClicked(true); 
   };
 
   return (
@@ -83,7 +85,17 @@ const Introduction = () => {
       <h2 className="text-4xl font-bold mb-4 text-center">ABOUT ME</h2>
       <div className="cards-container">
         {/* Card 1 - Introduction */}
-        <div className="card small introduction-card" onClick={toggleIntroExpand}>
+        <div className="card small introduction-card relative" onClick={toggleIntroExpand}>
+          {/* "Click Me" Prompt */}
+          {!introClicked && (
+            <div
+              className="absolute bottom-4 left-4 bg-transparent text-white font-bold text-xs px-2 py-1 rounded animate-pulse transition-opacity duration-500"
+              style={{ fontFamily: 'Poppins, sans-serif' }}
+            >
+              Click Me
+            </div>
+          )}
+
           <h3 className="title-with-icon">
             <img src={starIcon} alt="Star Icon" className="section-icon" />
             Introduction
@@ -97,7 +109,7 @@ const Introduction = () => {
           {/* Show extra content only if expanded */}
           <div className={`expandable-content ${isIntroExpanded ? 'expanded' : ''}`}>
             <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
             </p>
           </div>
         </div>
