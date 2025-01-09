@@ -1,14 +1,65 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../elements/Contact.css';
 import '../elements/MainCard.css';
 
+import emailjs from 'emailjs-com';
+
 const ContactMe = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: '',
+  });
+
+  const [statusMessage, setStatusMessage] = useState('');
+
+  // Handle form input changes
+  const handleInputChange = (e) => {
+    const { id, value } = e.target;
+    setFormData((prevState) => ({
+      ...prevState,
+      [id]: value,
+    }));
+  };
+
+  // Handle form submission
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    // Validate inputs
+    if (!formData.name || !formData.email || !formData.message) {
+      setStatusMessage('Please fill in all fields.');
+      return;
+    }
+
+    // Send form data using EmailJS
+    emailjs
+      .send(
+        'service_3mkpoi5', // Replace with your EmailJS service ID
+        'template_cj2hwjb', // Replace with your EmailJS template ID
+        formData,
+        'iOs1drhLW9QM6NDM_'
+      )
+      .then(
+        () => {
+          setStatusMessage('Message sent successfully!');
+          setFormData({ name: '', email: '', message: '' }); // Reset form
+        },
+        (error) => {
+          setStatusMessage('Failed to send message. Please try again.');
+          console.error('EmailJS Error:', error);
+        }
+      );
+  };
+
   return (
     <section className="min-h-screen bg-transparent text-white flex items-center justify-center p-8">
       <div className="w-full max-w-6xl flex flex-col lg:flex-row items-center justify-between gap-8">
         {/* Rocket Container */}
-        <div className="relative w-full lg:w-1/2 flex justify-center items-center" 
-             style={{ transform: 'translate(-85px, -125px)' }}>
+        <div
+          className="relative w-full lg:w-1/2 flex justify-center items-center"
+          style={{ transform: 'translate(-85px, -125px)' }}
+        >
           <div className="rocket">
             <div className="rocket-body">
               <div className="body"></div>
@@ -38,7 +89,7 @@ const ContactMe = () => {
             <p className="mb-6 text-gray-300 font-poppins">
               Feel free to reach out to me via email or connect on social media!
             </p>
-            <form className="space-y-4 w-full">
+            <form onSubmit={handleSubmit} className="space-y-4 w-full">
               <div>
                 <label htmlFor="name" className="block text-gray-400 text-left font-poppins">
                   Name
@@ -46,7 +97,9 @@ const ContactMe = () => {
                 <input
                   type="text"
                   id="name"
-                  className="w-full p-3 rounded-md bg-gray-900 text-gray-300 border border-gray-700 focus:outline-none font-poppins"
+                  value={formData.name}
+                  onChange={handleInputChange}
+                  className="w-full p-3 rounded-md bg-white text-gray-900 border-none focus:outline-none focus:ring-2 focus:ring-blue-500 font-poppins"
                   placeholder="Your Name"
                 />
               </div>
@@ -57,7 +110,9 @@ const ContactMe = () => {
                 <input
                   type="email"
                   id="email"
-                  className="w-full p-3 rounded-md bg-gray-900 text-gray-300 border border-gray-700 focus:outline-none font-poppins"
+                  value={formData.email}
+                  onChange={handleInputChange}
+                  className="w-full p-3 rounded-md bg-white text-gray-900 border-none focus:outline-none focus:ring-2 focus:ring-blue-500 font-poppins"
                   placeholder="Your Email"
                 />
               </div>
@@ -67,8 +122,10 @@ const ContactMe = () => {
                 </label>
                 <textarea
                   id="message"
+                  value={formData.message}
+                  onChange={handleInputChange}
                   rows="4"
-                  className="w-full p-3 rounded-md bg-gray-900 text-gray-300 border border-gray-700 focus:outline-none font-poppins"
+                  className="w-full p-3 rounded-md bg-white text-gray-900 border-none focus:outline-none focus:ring-2 focus:ring-blue-500 font-poppins"
                   placeholder="Your Message"
                 ></textarea>
               </div>
@@ -79,6 +136,7 @@ const ContactMe = () => {
                 Send Message
               </button>
             </form>
+            {statusMessage && <p className="mt-4 text-center">{statusMessage}</p>}
           </div>
         </div>
       </div>
