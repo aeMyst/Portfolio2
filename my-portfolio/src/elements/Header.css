@@ -146,7 +146,17 @@ header {
 .mobile-dropdown {
   background: rgba(36, 36, 36, 0.95);
   border-top: 1px solid rgba(255, 255, 255, 0.1);
-  animation: fadeIn 0.3s ease-in-out;
+  animation: fadeIn 0.3s ease-in-out forwards;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.mobile-dropdown.closing {
+  opacity: 0;
+  visibility: hidden; 
+  transform: translateY(-1000px);
 }
 
 .mobile-dropdown button {

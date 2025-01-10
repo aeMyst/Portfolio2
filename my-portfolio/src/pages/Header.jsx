@@ -3,32 +3,54 @@ import "../elements/Header.css";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [isClosing, setIsClosing] = useState(false);
 
   const handleNavigation = (sectionId) => {
     const section = document.getElementById(sectionId);
     if (section) {
       section.scrollIntoView({ behavior: "smooth" });
     }
-    setMenuOpen(false); // Close the menu after navigation
+    closeMenu(); // Close the menu after navigation
+  };
+
+  const toggleMenu = () => {
+    if (menuOpen) {
+      closeMenu();
+    } else {
+      setMenuOpen(true);
+    }
+  };
+
+  const closeMenu = () => {
+    setIsClosing(true); 
+    setTimeout(() => {
+      setMenuOpen(false); 
+      setIsClosing(false); 
+    }, 300); 
   };
 
   return (
     <header className="text-white p-4 fixed top-0 w-full shadow-md z-10">
       <div className="body">
-
-<div className="mobile-menu md:hidden flex items-center justify-between">
-          <span className="text-lg font-bold">Peter Tran</span>
+        {/* Hamburger Menu for Mobile */}
+        <div className="mobile-menu md:hidden flex items-center justify-between">
+          <span className="text-lg font-bold">My Portfolio</span>
           <button
             className="hamburger-button"
-            onClick={() => setMenuOpen((prev) => !prev)}
+            onClick={toggleMenu}
+            aria-label="Toggle Menu"
           >
             ☰
           </button>
         </div>
 
         {/* Dropdown Menu for Mobile */}
-        {menuOpen && (
-          <div className="mobile-dropdown bg-transparent text-white flex flex-col p-4 space-y-2 absolute top-full left-0 w-full shadow-lg z-20">
+        {(menuOpen || isClosing) && (
+          <div
+            className={`mobile-dropdown bg-gray-800 text-white flex flex-col p-4 space-y-2 absolute top-full left-0 w-full shadow-lg z-20 ${
+              isClosing ? "closing" : ""
+            }`}
+          >
             <button
               onClick={() => handleNavigation("home")}
               className="text-left px-4 py-2 hover:bg-gray-700 rounded"
