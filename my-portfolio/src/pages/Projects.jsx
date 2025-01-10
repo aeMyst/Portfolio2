@@ -18,6 +18,7 @@ const Projects = () => {
       technologies: "Vite, React, TailwindCSS, HTML, CSS, EmailJS, Netlify",
       gif: portfolioImg,
       github: "https://github.com/aeMyst/Portfolio2",
+      notionLink: "https://confusion-neon-2eb.notion.site/Work-In-Progress-177445cbc15580bca9fff945e5909435",
     },
 
     {
@@ -26,6 +27,7 @@ const Projects = () => {
       technologies: "Firebase, React, JavaScript, Express.js, Gemini AI, Axios, Figma",
       gif: petPalsImg,
       github: "https://github.com/aeMyst/PetPals",
+      notionLink: "https://confusion-neon-2eb.notion.site/Work-In-Progress-177445cbc15580bca9fff945e5909435",
     },
     {
       name: "RevRentals Motorcycle Marketplace",
@@ -33,6 +35,7 @@ const Projects = () => {
       technologies: "Flutter, Dart, Figma, Django, Python, SQL, mySQL, Android Studio",
       gif:  revRentalsImg,
       github: "https://github.com/aeMyst/RevRentals",
+      notionLink: "https://confusion-neon-2eb.notion.site/Work-In-Progress-177445cbc15580bca9fff945e5909435",
     },
     {
       name: "Minigame Online Portal",
@@ -40,6 +43,7 @@ const Projects = () => {
       technologies: "Java, JavaFX, CSS",
       gif: gamePortalImg,
       github: "https://github.com/aeMyst/Minigame-Portal",
+      notionLink: "https://confusion-neon-2eb.notion.site/Work-In-Progress-177445cbc15580bca9fff945e5909435",
     },
     {
       name: "ChefAI",
@@ -47,6 +51,7 @@ const Projects = () => {
       technologies: "HTML, CSS, JavaScript, Python, Flask, SQLite, Figma, OpenAI",
       gif: chefaiImg,
       github: "https://github.com/aeMyst/ai-chef",
+      notionLink: "https://confusion-neon-2eb.notion.site/Work-In-Progress-177445cbc15580bca9fff945e5909435",
     },
     {
       name: "Celebrity Capability Data Survey",
@@ -54,6 +59,7 @@ const Projects = () => {
       technologies: "Java, JavaFX, CSS",
       gif: testappImg,
       github: "https://github.com/aeMyst/Celebrity-Compatibility-Test",
+      notionLink: "https://confusion-neon-2eb.notion.site/Work-In-Progress-177445cbc15580bca9fff945e5909435",
     },
     {
       name: "Wordle Replica",
@@ -61,6 +67,7 @@ const Projects = () => {
       technologies: "Python",
       gif: wordleImg,
       github: "https://github.com/aeMyst/Wordle",
+      notionLink: "https://confusion-neon-2eb.notion.site/Work-In-Progress-177445cbc15580bca9fff945e5909435",
     },
   ];
 
@@ -116,6 +123,17 @@ const Projects = () => {
               >
                 View on GitHub
               </a>
+
+              {project.notionLink && (
+                <a
+                  href={project.notionLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="Projectbutton"
+                >
+                  Project Notes
+                </a>
+              )}
             </div>
           </div>
         ))}
