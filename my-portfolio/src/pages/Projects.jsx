@@ -2,13 +2,19 @@ import React from "react";
 import "../elements/Projects.css"
 import "../elements/MainCard.css"
 
+import portfolioImg from "../assets/projects/portfolio.png";
+import petPalsImg from "../assets/projects/petpals.png";
+import revRentalsImg from "../assets/projects/revrentals.png";
+import gamePortalImg from "../assets/projects/gameportal.png";
+import chefaiImg from "../assets/projects/chefai.png";
+
 const Projects = () => {
   const projectData = [
     {
       name: "Portfolio Website",
       description: "A portfolio website that includes information about me.",
       technologies: "React, TailwindCSS, HTML, CSS, Netlify",
-      gif: "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/8a2da741492897.57a8a0b0747b4.gif",
+      gif: portfolioImg,
       github: "https://github.com/aeMyst/Portfolio2",
     },
 
@@ -16,28 +22,28 @@ const Projects = () => {
       name: "PetPals",
       description: "An anonymous blog platform with personalized AI-powered content.",
       technologies: "Firebase, React, JavaScript, Express.js, Gemini AI, Axios, Figma",
-      gif: "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/8a2da741492897.57a8a0b0747b4.gif",
-      github: "https://github.com/ryanwoong/PetPals",
+      gif: petPalsImg,
+      github: "https://github.com/aeMyst/PetPals",
     },
     {
       name: "RevRentals Motorcycle Marketplace",
       description: "A peer-to-peer marketplace revolutionizing motorcycle rentals.",
       technologies: "Flutter, Dart, Figma, Firebase, SQL",
-      gif: "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/8a2da741492897.57a8a0b0747b4.gif",
+      gif:  revRentalsImg,
       github: "https://github.com/aeMyst/RevRentals",
     },
     {
       name: "Minigame Online Portal",
       description: "A multiplayer platform enabling seamless matchmaking.",
       technologies: "Java, JavaFX, CSS",
-      gif: "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/8a2da741492897.57a8a0b0747b4.gif",
-      github: "https://github.com/username/minigameportal",
+      gif: gamePortalImg,
+      github: "https://github.com/aeMyst/Minigame-Portal",
     },
     {
       name: "ChefAI",
       description: "A smart recipe generator using OpenAI for personalized recipes.",
       technologies: "HTML, CSS, JavaScript, Python, Flask, SQLite, Figma, OpenAI",
-      gif: "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/8a2da741492897.57a8a0b0747b4.gif",
+      gif: chefaiImg,
       github: "https://github.com/arcleah/ai-chef",
     },
     {
@@ -81,7 +87,8 @@ const Projects = () => {
             <img
               src={project.gif}
               alt={`${project.name} functionality`}
-              className="h-24 w-24 mb-6 rounded-md object-cover"
+              className="w-72 h-72 mb-6 object-fill 
+             border border-black rounded-md"
             />
 
             {/* Project Name */}

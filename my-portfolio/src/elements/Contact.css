@@ -283,14 +283,14 @@
 
   @media (max-width: 1024px) {
     .contact-container {
-      justify-content: center; /* Center the container */
-      align-items: center; /* Center the card vertically */
-      flex-direction: column; /* Stack items vertically */
+      justify-content: center; 
+      align-items: center; 
+      flex-direction: column; 
     }
   
     .contact-card {
-      width: 100%; /* Take full width on smaller screens */
-      max-width: 500px; /* Optional: Limit max width for better layout */
-      margin: 0 auto; /* Center horizontally */
+      width: 100%; 
+      max-width: 500px; 
+      margin: 0 auto;
     }
   }
