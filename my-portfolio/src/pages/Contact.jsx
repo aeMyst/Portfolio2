@@ -93,7 +93,7 @@ const ContactMe = () => {
         )}
 
         {/* Contact Form */}
-        <div className="w-full lg:w-1/2">
+        <div className="w-full lg:w-1/2 flex justify-center">
           <div className="card contact">
             <h2 className="text-3xl font-bold mb-4 font-poppins">Contact Me</h2>
             <p className="mb-6 text-gray-300 font-poppins">
