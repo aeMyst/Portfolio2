@@ -1,19 +1,69 @@
-import React from 'react';
-import '../elements/Header.css';
+import React, { useState } from "react";
+import "../elements/Header.css";
 
 const Header = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   const handleNavigation = (sectionId) => {
     const section = document.getElementById(sectionId);
     if (section) {
-      section.scrollIntoView({ behavior: 'smooth' });
+      section.scrollIntoView({ behavior: "smooth" });
     }
+    setMenuOpen(false); // Close the menu after navigation
   };
 
   return (
     <header className="text-white p-4 fixed top-0 w-full shadow-md z-10">
       <div className="body">
-        <div className="tabs">
-          {/* Home Tab */}
+
+<div className="mobile-menu md:hidden flex items-center justify-between">
+          <span className="text-lg font-bold">Peter Tran</span>
+          <button
+            className="hamburger-button"
+            onClick={() => setMenuOpen((prev) => !prev)}
+          >
+            ☰
+          </button>
+        </div>
+
+        {/* Dropdown Menu for Mobile */}
+        {menuOpen && (
+          <div className="mobile-dropdown bg-transparent text-white flex flex-col p-4 space-y-2 absolute top-full left-0 w-full shadow-lg z-20">
+            <button
+              onClick={() => handleNavigation("home")}
+              className="text-left px-4 py-2 hover:bg-gray-700 rounded"
+            >
+              Home
+            </button>
+            <button
+              onClick={() => handleNavigation("about")}
+              className="text-left px-4 py-2 hover:bg-gray-700 rounded"
+            >
+              About Me
+            </button>
+            <button
+              onClick={() => handleNavigation("projects")}
+              className="text-left px-4 py-2 hover:bg-gray-700 rounded"
+            >
+              Projects
+            </button>
+            <button
+              onClick={() => handleNavigation("history")}
+              className="text-left px-4 py-2 hover:bg-gray-700 rounded"
+            >
+              Experience
+            </button>
+            <button
+              onClick={() => handleNavigation("contact")}
+              className="text-left px-4 py-2 hover:bg-gray-700 rounded"
+            >
+              Contact Me
+            </button>
+          </div>
+        )}
+
+        {/* Tabs for Desktop */}
+        <div className={`tabs md:grid ${menuOpen ? "block" : "hidden"} md:flex`}>
           <input
             defaultChecked
             value="Home"
@@ -25,13 +75,12 @@ const Header = () => {
           <label
             htmlFor="home-tab"
             className="label cursor-pointer"
-            style={{ color: 'white' }} 
-            onClick={() => handleNavigation('home')}
+            style={{ color: "white" }}
+            onClick={() => handleNavigation("home")}
           >
             Home
           </label>
 
-          {/* About Me Tab */}
           <input
             value="About"
             name="navigation"
@@ -42,13 +91,12 @@ const Header = () => {
           <label
             htmlFor="about-tab"
             className="label cursor-pointer"
-            style={{ color: 'white' }} 
-            onClick={() => handleNavigation('about')}
+            style={{ color: "white" }}
+            onClick={() => handleNavigation("about")}
           >
             About Me
           </label>
 
-          {/* Projects Tab */}
           <input
             value="Projects"
             name="navigation"
@@ -59,13 +107,13 @@ const Header = () => {
           <label
             htmlFor="projects-tab"
             className="label cursor-pointer"
-            style={{ color: 'white' }} 
-            onClick={() => handleNavigation('projects')}
+            style={{ color: "white" }}
+            onClick={() => handleNavigation("projects")}
           >
             Projects
           </label>
-          {/* History Tab */}
-            <input
+
+          <input
             value="history"
             name="navigation"
             id="history-tab"
@@ -75,13 +123,12 @@ const Header = () => {
           <label
             htmlFor="history-tab"
             className="label cursor-pointer"
-            style={{ color: 'white' }} 
-            onClick={() => handleNavigation('history')}
+            style={{ color: "white" }}
+            onClick={() => handleNavigation("history")}
           >
             Experience
           </label>
 
-          {/* Contact Me Tab */}
           <input
             value="contact"
             name="navigation"
@@ -92,8 +139,8 @@ const Header = () => {
           <label
             htmlFor="contact-tab"
             className="label cursor-pointer"
-            style={{ color: 'white' }} 
-            onClick={() => handleNavigation('contact')}
+            style={{ color: "white" }}
+            onClick={() => handleNavigation("contact")}
           >
             Contact Me
           </label>

@@ -134,3 +134,73 @@ header {
 .tabs:has(:focus-visible)::after {
   outline-color: transparent;
 }
+
+/* Mobile Menu */
+.mobile-menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 85%;
+}
+
+.mobile-dropdown {
+  background: rgba(36, 36, 36, 0.95);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.mobile-dropdown button {
+  width: 100%;
+  text-align: left;
+  font-size: 1rem;
+  color: white;
+  padding: 10px 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.mobile-dropdown button:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Hamburger Button */
+.hamburger-button {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.hamburger-button:hover {
+  transform: scale(1.1);
+}
+
+/* Smooth Fade Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Hide tabs by default on small screens */
+.tabs {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .mobile-menu {
+    display: none;
+  }
+
+  .tabs {
+    display: grid;
+  }
+}
