@@ -289,10 +289,10 @@
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   .card button {
     cursor: pointer;
-    width: 215px;
+    width: 90%;
     height: 50px;
     border-radius: 100px;
     border: none;
@@ -312,8 +312,8 @@
   .card button::before {
     content: "";
     position: absolute;
-    width: 210px;
-    height: 45px;
+    width: calc(100% - 5px); /* Matches the button's width, minus padding */
+    height: calc(100% - 10px);
     background-color: #212121;
     border-radius: 50px;
     z-index: -1;
