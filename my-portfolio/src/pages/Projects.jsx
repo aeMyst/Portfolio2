@@ -7,57 +7,59 @@ import petPalsImg from "../assets/projects/petpals.png";
 import revRentalsImg from "../assets/projects/revrentals.png";
 import gamePortalImg from "../assets/projects/gameportal.png";
 import chefaiImg from "../assets/projects/chefai.png";
+import testappImg from "../assets/projects/testapp.png";
+import wordleImg from "../assets/projects/wordle.png";
 
 const Projects = () => {
   const projectData = [
     {
       name: "Portfolio Website",
-      description: "A portfolio website that includes information about me.",
-      technologies: "React, TailwindCSS, HTML, CSS, Netlify",
+      description: "A personal portfolio site showcasing my background. It includes my professional history, past projects, skill set, and hobbies, plus a Contact Me page that uses EmailJS to send messages directly to my inbox with ease and security.",
+      technologies: "Vite, React, TailwindCSS, HTML, CSS, EmailJS, Netlify",
       gif: portfolioImg,
       github: "https://github.com/aeMyst/Portfolio2",
     },
 
     {
       name: "PetPals",
-      description: "An anonymous blog platform with personalized AI-powered content.",
+      description: "An anonymous blogging platform featuring personalized AI-driven content. Users can post anonymously to a public feed, enabling readers to connect and share support. Meanwhile, the user experience is gamified by letting users feed and customize a virtual pet.",
       technologies: "Firebase, React, JavaScript, Express.js, Gemini AI, Axios, Figma",
       gif: petPalsImg,
       github: "https://github.com/aeMyst/PetPals",
     },
     {
       name: "RevRentals Motorcycle Marketplace",
-      description: "A peer-to-peer marketplace revolutionizing motorcycle rentals.",
-      technologies: "Flutter, Dart, Figma, Firebase, SQL",
+      description: "A mobile-focused, peer-to-peer marketplace for renting motorcycles. Users can browse specific dates or post their own listings, complete with verified service history. A built-in filter streamlines database searches. The platform also includes administrative controls.",
+      technologies: "Flutter, Dart, Figma, Django, Python, SQL, mySQL, Android Studio",
       gif:  revRentalsImg,
       github: "https://github.com/aeMyst/RevRentals",
     },
     {
       name: "Minigame Online Portal",
-      description: "A multiplayer platform enabling seamless matchmaking.",
+      description: "A multiplayer platform that simulates genuine matchmaking. It features an integrated chat channel, a leaderboard, a profile statistics module, and a help section, all functioning seamlessly without relying on any external database service for data storage.",
       technologies: "Java, JavaFX, CSS",
       gif: gamePortalImg,
       github: "https://github.com/aeMyst/Minigame-Portal",
     },
     {
       name: "ChefAI",
-      description: "A smart recipe generator using OpenAI for personalized recipes.",
+      description: "A recipe generator powered by OpenAI that provides tailored meal ideas in real time. Users supply their pantry or fridge items, enabling the system to highlight soon-to-expire ingredients and reduce household waste by automatically generating relevant recipes.",
       technologies: "HTML, CSS, JavaScript, Python, Flask, SQLite, Figma, OpenAI",
       gif: chefaiImg,
-      github: "https://github.com/arcleah/ai-chef",
+      github: "https://github.com/aeMyst/ai-chef",
     },
     {
       name: "Celebrity Capability Data Survey",
-      description: "A tool to calculate compatibility with celebrities and visualize results.",
+      description: "A compatibility calculator with celebrities that visualizes results through charts. Users complete a quick 2-minute quiz, and the system analyzes their answers to determine which celebrity they align with the most, presenting engaging, data-driven insights.",
       technologies: "Java, JavaFX, CSS",
-      gif: "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/8a2da741492897.57a8a0b0747b4.gif",
+      gif: testappImg,
       github: "https://github.com/aeMyst/Celebrity-Compatibility-Test",
     },
     {
       name: "Wordle Replica",
-      description: "A console-based Python program replicating the popular Wordle game.",
+      description: "A console-based Python program that replicates the Wordle game experience. The app selects a 5-letter word from a database of 1,000 words, allowing users to guess the word with accurate color feedback for each letter, just like the original Wordle.",
       technologies: "Python",
-      gif: "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/8a2da741492897.57a8a0b0747b4.gif",
+      gif: wordleImg,
       github: "https://github.com/aeMyst/Wordle",
     },
   ];
