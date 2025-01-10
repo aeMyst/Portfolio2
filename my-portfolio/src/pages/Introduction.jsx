@@ -109,7 +109,10 @@ const Introduction = () => {
           {/* Show extra content only if expanded */}
           <div className={`expandable-content ${isIntroExpanded ? 'expanded' : ''}`}>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            I have extensive experience with HTML, CSS, Java, Python, SQL, and more, which I've honed through a variety of hands-on projects. 
+            Beyond coding, I’m passionate about gaming, designing and building custom mechanical keyboards, playing the guitar, and exploring creative hobbies. 
+            Most importantly, I thrive on connecting with others, whether it’s collaborating professionally or engaging casually. 
+            Let’s connect; I’d love to share more about myself and hear your story too!
             </p>
           </div>
         </div>
