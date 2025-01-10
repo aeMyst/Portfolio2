@@ -18,7 +18,7 @@
 
 .tape-container {
     overflow: hidden;
-    width: 750px;
+    width: 100%;
     position: relative;
     padding: 20px 0;
     mask-image: linear-gradient(to right, transparent, black 40%, black 80%, transparent);
